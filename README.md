@@ -66,7 +66,7 @@ To improve robustness, **Adversarial Training** was employed. This method involv
 
 | Model                     | Clean Accuracy (%) | FGSM Accuracy (%) | PGD Accuracy (%) | C&W Accuracy (%) |
 |---------------------------|--------------------|-------------------|------------------|------------------|
-| **ResNet20 (Adversarially Trained)** | 57.40               | 44.10             | 22.50            | 56.20            |
+| **ResNet20 (Adversarially Trained)** | 57.40               | 44.10             | 22.50            | 56.20           |
 | **VGG16 (Adversarially Trained)**   | 71.80               | 56.70             | 34.70            | 71.40            |
 
 ## Classification Reports for Adversarial Examples
@@ -89,6 +89,10 @@ To improve robustness, **Adversarial Training** was employed. This method involv
    macro avg       0.75      0.71      0.71      1000
 weighted avg       0.79      0.76      0.76      1000
 ```
+| Clean                                | Attack Type                                     |
+|--------------------------------------|-------------------------------------------------|
+| ![alt text](/img/vgg16-clean.png) | ![alt text](/img/vgg16-fgsm.png)
+
 
 ### VGG16 - PGD Adversarial Examples:
 ```plaintext
@@ -108,6 +112,9 @@ weighted avg       0.79      0.76      0.76      1000
    macro avg       0.49      0.43      0.42      1000
 weighted avg       0.55      0.49      0.49      1000
 ```
+| Clean                                | Attack Type                                     |
+|--------------------------------------|-------------------------------------------------|
+| ![alt text](/img/vgg16-clean.png) | ![alt text](/img/vgg16-pgd.png)
 
 ### VGG16 - C&W Adversarial Examples:
 ```plaintext
@@ -127,6 +134,9 @@ weighted avg       0.55      0.49      0.49      1000
    macro avg       0.97      0.98      0.97      1000
 weighted avg       0.98      0.98      0.98      1000
 ```
+| Clean                                | Attack Type                                     |
+|--------------------------------------|-------------------------------------------------|
+| ![alt text](/img/vgg16-clean.png) | ![alt text](/img/vgg1c&w.png)
 
 ### ResNet20 - FGSM Adversarial Examples:
 ```plaintext
@@ -147,6 +157,9 @@ weighted avg       0.98      0.98      0.98      1000
    macro avg       0.45      0.44      0.37      1000
 weighted avg       0.63      0.40      0.40      1000
 ```
+| Clean                                | Attack Type                                     |
+|--------------------------------------|-------------------------------------------------|
+| ![alt text](/img/resnet-clean.png) | ![alt text](/img/resnet-fgsm.png)
 
 ### ResNet20 - PGD Adversarial Examples:
 ```plaintext
@@ -167,6 +180,9 @@ weighted avg       0.63      0.40      0.40      1000
    macro avg       0.44      0.43      0.35      1000
 weighted avg       0.57      0.26      0.28      1000
 ```
+| Clean                                | Attack Type                                     |
+|--------------------------------------|-------------------------------------------------|
+| ![alt text](/img/resnet-clean.png) | ![alt text](img/resnet-pgd.png)
 
 ### ResNet20 - C&W Adversarial Examples:
 ```plaintext
@@ -187,32 +203,6 @@ weighted avg       0.57      0.26      0.28      1000
    macro avg       0.95      0.94      0.95      1000
 weighted avg       0.96      0.96      0.96      1000
 ```
-
-## Installation and Setup
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/adversarial-robustness.git
-    ```
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the training and evaluation:
-    ```bash
-    python train.py
-    ```
-
-## Usage Instructions
-To evaluate the models:
-1. **Training:**
-    - Train models using clean images and adversarial examples for adversarial training.
-    ```bash
-    python train.py --adversarial_training --epochs 3
-    ```
-
-2. **Evaluate the models:**
-    - Evaluate clean and adversarial performance.
-    ```bash
-    python evaluate.py --model vgg16 --attack fgsm
-    python evaluate.py --model resnet20 --attack pgd
-    ```
+| Clean                                | Attack Type                                     |
+|--------------------------------------|-------------------------------------------------|
+| ![alt text](/img/resnet-clean.png) | ![alt text](/img/resnet-c&w.png)
