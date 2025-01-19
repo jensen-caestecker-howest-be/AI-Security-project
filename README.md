@@ -136,7 +136,7 @@ weighted avg       0.98      0.98      0.98      1000
 ```
 | Clean                                | Attack Type                                     |
 |--------------------------------------|-------------------------------------------------|
-| ![alt text](/img/vgg16-clean.png) | ![alt text](/img/vgg16-c&w.png)
+| ![alt text](/img/vgg16-clean.png) | ![alt text](/img/vgg1c&w.png)
 
 ### ResNet20 - FGSM Adversarial Examples:
 ```plaintext
@@ -182,7 +182,7 @@ weighted avg       0.57      0.26      0.28      1000
 ```
 | Clean                                | Attack Type                                     |
 |--------------------------------------|-------------------------------------------------|
-| ![alt text](/img/resnet-clean.png) | ![alt text](/img/resnet-pgd.png)
+| ![alt text](/img/resnet-clean.png) | ![alt text](img/resnet-pgd.png)
 
 ### ResNet20 - C&W Adversarial Examples:
 ```plaintext
@@ -206,32 +206,3 @@ weighted avg       0.96      0.96      0.96      1000
 | Clean                                | Attack Type                                     |
 |--------------------------------------|-------------------------------------------------|
 | ![alt text](/img/resnet-clean.png) | ![alt text](/img/resnet-c&w.png)
-
-## Installation and Setup
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/adversarial-robustness.git
-    ```
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the training and evaluation:
-    ```bash
-    python train.py
-    ```
-
-## Usage Instructions
-To evaluate the models:
-1. **Training:**
-    - Train models using clean images and adversarial examples for adversarial training.
-    ```bash
-    python train.py --adversarial_training --epochs 3
-    ```
-
-2. **Evaluate the models:**
-    - Evaluate clean and adversarial performance.
-    ```bash
-    python evaluate.py --model vgg16 --attack fgsm
-    python evaluate.py --model resnet20 --attack pgd
-    ```
